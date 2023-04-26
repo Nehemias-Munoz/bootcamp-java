@@ -34,7 +34,7 @@ public class App {
                 resultado = 0;
                 break;
         }
-        System.out.println("El resultado de la operacion es:" + resultado);
+        System.out.println("El resultado de la operacion " + numero1 + signo + numero2 + " es: " + resultado);
     }
 }
 
