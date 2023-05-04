@@ -1,18 +1,12 @@
-## Getting Started
+## Ejercicio 20
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Escribe un programa que administre almacene una cantidad indeterminada de números enteros en
+un ArrayList.
+El programa debe solicitar números hasta que se ingrese el valor 0; una vez que esto
+pase, se debe desplegar el promedio simple de los números, el menor valor y el mayor de ellos.
 
-## Folder Structure
+Una vez realizado lo anterior, debe eliminar de la colección aquellos números que sean pares, y
+calcular y desplegar nuevamente el promedio, menor y mayor de los valores restantes.
 
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Considere que el valor 0 final no debe ser tomado en cuenta en el ArrayList. Además, se debe validar
+que, al momento de hacer los cálculos, existan al menos tres valores ingresados.
