@@ -1,18 +1,11 @@
-## Getting Started
+## Ejercicio 23
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Desarrolle un programa en Java que reciba una cadena de texto de largo indeterminado. Debe
+recorrer la cadena carácter por carácter, y debe realizar lo siguiente:
 
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- Si encuentra una letra minúscula, debe convertirla por la misma letra en mayúscula
+- Si encuentra una letra mayúscula, debe convertirla en la misma letra, pero minúscula
+- Los espacios en blanco y los números se mantienen
+- Si encuentra un carácter en blanco, debe omitirlo en el resultado
+  El programa debe retornar por consola un String que sea el resultado de las operaciones antes
+  indicadas aplicadas sobre el String original.
