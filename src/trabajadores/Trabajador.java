@@ -16,6 +16,11 @@ public class Trabajador {
         this.edad = edad;
     }
 
+    @Override
+    public String toString() {
+        return "Trabajador [nombres=" + nombres + ", apellidos=" + apellidos + ", run=" + run + ", edad=" + edad + "]";
+    }
+
     public String nombreCompleto() {
         return nombres + " " + apellidos;
     }
@@ -27,4 +32,5 @@ public class Trabajador {
         runInt[1] = Integer.parseInt(runsStrings[1]);
         return runInt[0];
     }
+
 }
