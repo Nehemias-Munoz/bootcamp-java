@@ -66,3 +66,5 @@ public class Trabajador {
     }
 
 }
+
+// Nehemias Muñoz
