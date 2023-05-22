@@ -4,15 +4,17 @@ public class Trabajador {
     private String nombres;
     private String apellidos;
     private String run;
+    private String telefono;
     private int edad;
 
     public Trabajador() {
     }
 
-    public Trabajador(String nombres, String apellidos, String run, int edad) {
+    public Trabajador(String nombres, String apellidos, String run, String telefono, int edad) {
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.run = run;
+        this.telefono = telefono;
         this.edad = edad;
     }
 
@@ -55,6 +57,14 @@ public class Trabajador {
 
     public void setRun(String run) {
         this.run = run;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
 
     public int getEdad() {
