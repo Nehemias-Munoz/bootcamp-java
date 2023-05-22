@@ -18,6 +18,9 @@ public class Trabajador {
         this.edad = edad;
     }
 
+    public void mostrarDatos(){
+        System.out.println("Telefono: "+ this.telefono+ " | Edad: "+ this.edad);
+    }
     @Override
     public String toString() {
         return "Trabajador [nombres=" + nombres + ", apellidos=" + apellidos + ", run=" + run + ", edad=" + edad + "]";
