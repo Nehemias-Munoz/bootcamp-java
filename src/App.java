@@ -25,7 +25,7 @@ public class App {
             caracter = cadena.charAt(i);
             if (vocales.indexOf(caracter) != -1) {
                 cantVocales++;
-            } else {
+            } else if (Character.isLetter(caracter)) {
                 cantConsonantes++;
             }
         }
