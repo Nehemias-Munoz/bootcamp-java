@@ -19,6 +19,7 @@ public class App {
         // Datos Asistentes
         String nombreAsistente = "";
         int edadAsistente = 0;
+        int calificacionAsistente = 0;
 
         // Datos funcionamiento
         int nCapacitaciones = 0;
@@ -61,6 +62,8 @@ public class App {
         int mayores35 = 0;
 
         cantidadAsistentes = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la cantidad de asistentes"));
+        String[][] matrizAsistentes = new String[cantidadAsistentes][2];
+
         for (int i = 0; i < cantidadAsistentes; i++) {
             do {
                 nombreAsistente = JOptionPane.showInputDialog("Ingrese el nombre del asistente");
@@ -75,6 +78,12 @@ public class App {
                     mayores35++;
                 }
             } while (edadAsistente < 18 || edadAsistente > 60);
+            do {
+                calificacionAsistente = Integer.parseInt(JOptionPane
+                        .showInputDialog("Ingrese una calificacion entre 1 y 7 en relacion a la capacitacion"));
+            } while (calificacionAsistente < 1 || calificacionAsistente > 7);
+            matrizAsistentes[i][0] = nombreAsistente;
+            matrizAsistentes[i][1] = Integer.toString(calificacionAsistente);
         }
 
         System.out.println("Datos de la empresa:");
