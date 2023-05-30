@@ -1,18 +1,7 @@
-## Getting Started
+## Ejercicio 17
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Desarrolle un programa en lenguaje Java tal que, al ingresar una cadena de texto o String por teclado, tome dicha cadena y la lea carácter por carácter, y los despliegue por consola.
+Al finalizar el programa, debe ser indicar la cantidad de vocales y la cantidad de consonantes.
 
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Nota 1: Se debe validar que la cadena ingresada no esté vacía; si eso sucede, debe pedirlo nuevamente.
+Nota 2: Recuerde que para obtener un carácter de un String puede usar el método CharAt.
