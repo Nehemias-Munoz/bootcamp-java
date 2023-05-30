@@ -1,24 +1,25 @@
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class App {
     public static void main(String[] args) throws Exception {
         String cadena;
-        String[] arrayCadena;
-        String abecedario = "abcdefghijklmnopqrstuvwxyz";
+        char[] arrayCadena;
+        String abecedario = "abcdefghijklmnñopqrstuvwxyz";
         int coincidencia = 0;
-        Scanner scan = new Scanner(System.in);
+        // Comprobamos la cadena no sea vacia o null
         do {
-            System.out.println("Ingrese una cadena:");
-            cadena = scan.nextLine().trim();
-        } while (cadena.isEmpty() != false);
-        arrayCadena = new String[cadena.length()];
-        for (int i = 0; i < cadena.length(); i++) {
-            arrayCadena[i] = Character.toString(cadena.charAt(i));
-        }
+            cadena = JOptionPane.showInputDialog(null, "Ingrese una cadena de texto");
+            cadena = cadena.trim();
+        } while (cadena.isBlank());
+
+        arrayCadena = new char[cadena.length()];
+        arrayCadena = cadena.toCharArray();
 
         for (int i = 0; i < abecedario.length(); i++) {
-            for (String caracter : arrayCadena) {
-                if (Character.toString(abecedario.charAt(i)).compareTo(caracter.toLowerCase()) == 0) {
+            for (char caracter : arrayCadena) {
+                // Validamos si el caracter en la lista es igual al caracter en el abcedario
+                if (Character.toString(abecedario.charAt(i))
+                        .compareTo(Character.toString(caracter).toLowerCase()) == 0) {
                     coincidencia++;
                 }
             }
