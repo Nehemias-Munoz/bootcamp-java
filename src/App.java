@@ -1,15 +1,11 @@
-import java.util.Arrays;
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Scanner scan = new Scanner(System.in);
         String cadena;
         String nuevaCadena = "";
         String[] cadenaDividida;
-        System.out.println("Ingrese una cadena");
-        cadena = scan.nextLine();
-        scan.close();
+        cadena = JOptionPane.showInputDialog("Ingrese la cadena de texto");
         cadenaDividida = cadena.split("");
         for (int i = 0; i < cadenaDividida.length; i++) {
             if (cadenaDividida[i].toUpperCase() == cadenaDividida[i]) {
@@ -19,7 +15,7 @@ public class App {
             }
             nuevaCadena += cadenaDividida[i];
         }
-        System.out.println("Cadena Inicial: " + cadena + " Cadena Formateada: " + nuevaCadena);
+        System.out.println("Cadena Inicial: " + cadena + "\n Cadena Formateada: " + nuevaCadena);
     }
 }
 
