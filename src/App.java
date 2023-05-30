@@ -1,13 +1,5 @@
 import java.util.Scanner;
 
-// Desarrolle un programa en lenguaje Java tal que, al ingresar una cadena de texto o String por
-// teclado, tome dicha cadena y la lea carácter por carácter, y los despliegue por consola.
-
-//Al finalizar el programa, debe ser indicar la cantidad de vocales y la cantidad de consonantes.
-// Nota 1: Se debe validar que la cadena ingresada no esté vacía; si eso sucede, debe pedirlo
-// nuevamente.
-// Nota 2: Recuerde que para obtener un carácter de un String puede usar el método CharAt.
-
 public class App {
     public static void main(String[] args) throws Exception {
         int cantVocales = 0;
@@ -16,16 +8,21 @@ public class App {
         char caracter;
         String vocales = "aeiou";
         Scanner scan = new Scanner(System.in);
+
+        // Validamos que no se ingrese un parametro vacio o nulo
         do {
             System.out.println("Ingrese una palabra o cadena de texto:");
             cadena = scan.nextLine().trim();
         } while (cadena.isEmpty());
+
+        // Ciclo con el largo de la cadena para verificar si lo que esta en la cadena es
+        // una vocal o una consonante
         for (int i = 0; i < cadena.length(); i++) {
             cadena = cadena.toLowerCase();
             caracter = cadena.charAt(i);
             if (vocales.indexOf(caracter) != -1) {
                 cantVocales++;
-            } else if (Character.isLetter(caracter)) {
+            } else if (Character.isLetter(caracter)) { // validamos si el caracter es una letra
                 cantConsonantes++;
             }
         }
