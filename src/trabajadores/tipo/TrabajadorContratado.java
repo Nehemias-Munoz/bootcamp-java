@@ -72,7 +72,7 @@ public class TrabajadorContratado extends Trabajador {
     }
 
     /**
-     * Muestra por consola los datos de: Fecha ingreso | Salario
+     * Muestra en panel los datos de: Fecha ingreso | Salario
      */
     @Override
     public void mostrarDatos() {

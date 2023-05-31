@@ -77,7 +77,7 @@ public class TrabajadorEventual extends Trabajador {
     }
 
     /**
-     * Muestra por consola los datos de: Disponibilidad | Correo electronico
+     * Muestra en panel los datos de: Disponibilidad | Correo electronico
      */
     @Override
     public void mostrarDatos() {
