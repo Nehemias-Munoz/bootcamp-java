@@ -1,18 +1,11 @@
-## Getting Started
+## Ejercicio 33
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Considere el caso de una microempresa, la cual está buscando desarrollar nuevos mercados. Para ello emplea una nueva función dentro de sus empleados: la figura de repartidor. Con esto se tiene dos tipos empleados: la de figura de vendedor y de repartidor, quienes en ambos casos son considerados empleados de la empresa.
 
-## Folder Structure
+a. Todo empleado tendrá los siguientes atributos: nombre, apellido, edad y salario.
+b. Además, si este empleado tiene más de 40 años se le dará un bono adicional de 100.000 pesos.
+c. En cuanto al vendedor, se desea saber su fecha de inicio en la empresa. En lo que respecta al repartidor, es necesario saber su disponibilidad horaria (texto).
+d. A los vendedores, se les asignará un bono adicional de $50.000, y en el caso de los repartidores, quienes tengan menos de 30 años se les asignará un bono adicional de $15.000.
 
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Se solicita entonces generar las clases antes mencionadas, cuidando crear los métodos
+correspondientes. Como entregable de este ejercicio, se pide un proyecto Java comprimido.
