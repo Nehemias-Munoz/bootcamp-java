@@ -2,12 +2,13 @@ package empleado.tipo;
 
 import java.time.LocalDate;
 
+import empleado.Bono;
 import empleado.Empleado;
 
 /**
  * @author nehemiasmunoz
  */
-public class Vendedor extends Empleado {
+public class Vendedor extends Empleado implements Bono {
     LocalDate fechaInicioEmpresa;
 
     /**
@@ -37,6 +38,15 @@ public class Vendedor extends Empleado {
     public Vendedor(String nombre, String apellido, int edad, double salario, LocalDate fechaInicioEmpresa) {
         super(nombre, apellido, edad, salario);
         this.fechaInicioEmpresa = fechaInicioEmpresa;
+    }
+
+    @Override
+    public void bonoAdicional() {
+        if (super.getEdad() < 30) {
+            super.setSalario(getSalario() + 15.000);
+        } else {
+            super.setSalario(getSalario() + 30.000);
+        }
     }
 
 }
