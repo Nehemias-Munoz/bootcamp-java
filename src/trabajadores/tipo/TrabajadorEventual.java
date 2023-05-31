@@ -1,5 +1,7 @@
 package trabajadores.tipo;
 
+import javax.swing.JOptionPane;
+
 import trabajadores.Trabajador;
 
 /**
@@ -74,4 +76,14 @@ public class TrabajadorEventual extends Trabajador {
         this.correoElectronico = correoElectronico;
     }
 
+    /**
+     * Muestra por consola los datos de: Disponibilidad | Correo electronico
+     */
+    @Override
+    public void mostrarDatos() {
+        // TODO Auto-generated method stub
+        super.mostrarDatos();
+        JOptionPane.showMessageDialog(null,
+                "Disponibilidad: " + disponibilidad + " Correo electronico: " + correoElectronico);
+    }
 }
