@@ -10,7 +10,7 @@ import trabajadores.Trabajador;
  */
 public class TrabajadorHonorario extends Trabajador {
     private String giro;
-    private String anioIniciacionActividades;
+    private int anioIniciacionActividades;
 
     /**
      * Constructor Vacio
@@ -24,7 +24,7 @@ public class TrabajadorHonorario extends Trabajador {
      * @param giro
      * @param anioIniciacionActividades
      */
-    public TrabajadorHonorario(String giro, String anioIniciacionActividades) {
+    public TrabajadorHonorario(String giro, int anioIniciacionActividades) {
         this.giro = giro;
         this.anioIniciacionActividades = anioIniciacionActividades;
     }
@@ -41,7 +41,7 @@ public class TrabajadorHonorario extends Trabajador {
      * @param anioIniciacionActividades
      */
     public TrabajadorHonorario(String nombres, String apellidos, String run, String telefono, int edad, String giro,
-            String anioIniciacionActividades) {
+            int anioIniciacionActividades) {
         super(nombres, apellidos, run, telefono, edad);
         this.giro = giro;
         this.anioIniciacionActividades = anioIniciacionActividades;
@@ -69,12 +69,21 @@ public class TrabajadorHonorario extends Trabajador {
         this.giro = giro;
     }
 
-    public String getAnioIniciacionActividades() {
+    public int getAnioIniciacionActividades() {
         return anioIniciacionActividades;
     }
 
-    public void setAnioIniciacionActividades(String anioIniciacionActividades) {
+    public void setAnioIniciacionActividades(int anioIniciacionActividades) {
         this.anioIniciacionActividades = anioIniciacionActividades;
     }
 
+    /**
+     * Muestra por consola los datos de: Giro | Año de inicio actividades
+     */
+    @Override
+    public void mostrarDatos() {
+        // TODO Auto-generated method stub
+        super.mostrarDatos();
+        JOptionPane.showMessageDialog(null, "Giro: " + giro + " Año Inicio Actividades: " + anioIniciacionActividades);
+    }
 }
