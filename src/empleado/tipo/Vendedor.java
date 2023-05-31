@@ -38,14 +38,16 @@ public class Vendedor extends Empleado implements Bono {
     public Vendedor(String nombre, String apellido, int edad, double salario, LocalDate fechaInicioEmpresa) {
         super(nombre, apellido, edad, salario);
         this.fechaInicioEmpresa = fechaInicioEmpresa;
+        bonoAdicional();
     }
 
+    /**
+     * Añade un bono de 15.000 en caso la edad del repartidor sea menor a 30
+     */
     @Override
     public void bonoAdicional() {
         if (super.getEdad() < 30) {
             super.setSalario(getSalario() + 15.000);
-        } else {
-            super.setSalario(getSalario() + 30.000);
         }
     }
 
