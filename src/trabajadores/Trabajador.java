@@ -1,15 +1,28 @@
 package trabajadores;
 
 public class Trabajador {
+    // Atributos de la clase
     private String nombres;
     private String apellidos;
     private String run;
     private String telefono;
     private int edad;
 
+    /**
+     * Constructor vacio
+     */
     public Trabajador() {
     }
 
+    /**
+     * Constructor de la clase
+     * 
+     * @param nombres
+     * @param apellidos
+     * @param run
+     * @param telefono
+     * @param edad
+     */
     public Trabajador(String nombres, String apellidos, String run, String telefono, int edad) {
         this.nombres = nombres;
         this.apellidos = apellidos;
@@ -18,18 +31,38 @@ public class Trabajador {
         this.edad = edad;
     }
 
-    public void mostrarDatos(){
-        System.out.println("Telefono: "+ this.telefono+ " | Edad: "+ this.edad);
+    /**
+     * Metodo mostrar datos
+     * Muestra por consola el telefono y la edad del trabajador
+     */
+    public void mostrarDatos() {
+        System.out.println("Telefono: " + this.telefono + " | Edad: " + this.edad);
     }
+
+    /**
+     * Metodo to String
+     * 
+     * @return parametros y valores de la clase
+     */
     @Override
     public String toString() {
         return "Trabajador [nombres=" + nombres + ", apellidos=" + apellidos + ", run=" + run + ", edad=" + edad + "]";
     }
 
+    /**
+     * Metodo nombre completo
+     * 
+     * @return Devuelve el nombre completo
+     */
     public String nombreCompleto() {
         return nombres + " " + apellidos;
     }
 
+    /**
+     * Metodo descomponer run
+     * 
+     * @return Devuelve el rut sin digito verificador en tipo int
+     */
     public int descomponerRun() {
         String[] runsStrings = run.split("-");
         int[] runInt = new int[2];
@@ -38,6 +71,7 @@ public class Trabajador {
         return runInt[0];
     }
 
+    // Getters and Setters
     public String getNombres() {
         return nombres;
     }
