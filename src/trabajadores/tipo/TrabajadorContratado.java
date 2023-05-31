@@ -1,5 +1,7 @@
 package trabajadores.tipo;
 
+import javax.swing.JOptionPane;
+
 import trabajadores.Trabajador;
 
 public class TrabajadorContratado extends Trabajador {
@@ -69,4 +71,14 @@ public class TrabajadorContratado extends Trabajador {
         this.salario = salario;
     }
 
+    /**
+     * Muestra por consola los datos de: Fecha ingreso | Salario
+     */
+    @Override
+    public void mostrarDatos() {
+        // TODO Auto-generated method stub
+        super.mostrarDatos();
+        JOptionPane.showMessageDialog(null,
+                "Fecha ingreso: " + fechaIngreso + " Salario: " + salario);
+    }
 }
