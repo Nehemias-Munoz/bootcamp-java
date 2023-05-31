@@ -1,11 +1,12 @@
 package empleado.tipo;
 
+import empleado.Bono;
 import empleado.Empleado;
 
 /**
  * @author nehemiasmunoz
  */
-public class Repartidor extends Empleado {
+public class Repartidor extends Empleado implements Bono {
     private String diponibilidadHoraria;
 
     /**
@@ -35,6 +36,14 @@ public class Repartidor extends Empleado {
     public Repartidor(String nombre, String apellido, int edad, double salario, String diponibilidadHoraria) {
         super(nombre, apellido, edad, salario);
         this.diponibilidadHoraria = diponibilidadHoraria;
+        bonoAdicional();
     }
 
+    /**
+     * Añade un bono de 30.000 al salario de los vendedores
+     */
+    @Override
+    public void bonoAdicional() {
+        super.setSalario(getSalario() + 50.000);
+    }
 }
