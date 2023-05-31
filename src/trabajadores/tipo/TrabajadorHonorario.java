@@ -1,61 +1,66 @@
 package trabajadores.tipo;
 
+import javax.swing.JOptionPane;
+
 import trabajadores.Trabajador;
 
 /**
  * @author nehemiasmunoz
- * Clase que extiende de Trabajador general y agrega 2 atributos nuevos
+ *         Clase que extiende de Trabajador general y agrega 2 atributos nuevos
  */
 public class TrabajadorHonorario extends Trabajador {
     private String giro;
-    private String añoIniciacionActividades;
+    private String anioIniciacionActividades;
 
     /**
      * Constructor Vacio
-     * */
+     */
     public TrabajadorHonorario() {
     }
 
     /**
      * Constructor clase trabajador
+     * 
      * @param giro
-     * @param añoIniciacionActividades
-     * */
-    public TrabajadorHonorario(String giro, String añoIniciacionActividades) {
+     * @param anioIniciacionActividades
+     */
+    public TrabajadorHonorario(String giro, String anioIniciacionActividades) {
         this.giro = giro;
-        this.añoIniciacionActividades = añoIniciacionActividades;
+        this.anioIniciacionActividades = anioIniciacionActividades;
     }
 
     /**
-     *Constructor de trabajador tipo honorario con herencia
+     * Constructor de trabajador tipo honorario con herencia
+     * 
      * @param nombres
      * @param apellidos
      * @param run
      * @param telefono
      * @param edad
      * @param giro
-     * @param añoIniciacionActividades
-     * */
+     * @param anioIniciacionActividades
+     */
     public TrabajadorHonorario(String nombres, String apellidos, String run, String telefono, int edad, String giro,
-            String añoIniciacionActividades) {
+            String anioIniciacionActividades) {
         super(nombres, apellidos, run, telefono, edad);
         this.giro = giro;
-        this.añoIniciacionActividades = añoIniciacionActividades;
+        this.anioIniciacionActividades = anioIniciacionActividades;
     }
 
     /**
      * Metodo toString
+     * 
      * @return parametros y valores de la clase
      */
     @Override
     public String toString() {
-        return "TrabajadorHonorario{" +
-                "giro='" + giro + '\'' +
-                ", añoIniciacionActividades='" + añoIniciacionActividades + '\'' +
+        return "Trabajador Honorario{" +
+                "giro ='" + giro + '\'' +
+                ", año iniciacion actividades ='" + anioIniciacionActividades + '\'' +
                 '}';
     }
 
-    //Getters and Setters
+    // Getters and Setters
     public String getGiro() {
         return giro;
     }
@@ -64,11 +69,12 @@ public class TrabajadorHonorario extends Trabajador {
         this.giro = giro;
     }
 
-    public String getAñoIniciacionActividades() {
-        return añoIniciacionActividades;
+    public String getAnioIniciacionActividades() {
+        return anioIniciacionActividades;
     }
 
-    public void setAñoIniciacionActividades(String añoIniciacionActividades) {
-        this.añoIniciacionActividades = añoIniciacionActividades;
+    public void setAnioIniciacionActividades(String anioIniciacionActividades) {
+        this.anioIniciacionActividades = anioIniciacionActividades;
     }
+
 }
