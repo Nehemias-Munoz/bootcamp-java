@@ -1,5 +1,9 @@
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 import javax.swing.JOptionPane;
 
+import capacitacion.Capacitacion;
 import cliente.Cliente;
 import usuario.Usuario;
 
@@ -21,11 +25,30 @@ public class App {
         // mostrar datos
         cliente.toString();
 
+        // Implementacion clase usuario
         Usuario usuario = new Usuario();
         usuario.setNombre(JOptionPane.showInputDialog("Ingrese el nombre del cliente"));
         usuario.setFechaNacimiento(JOptionPane.showInputDialog("Ingrese la fecha nacimiento del cliente"));
         usuario.setRun(JOptionPane.showInputDialog("Ingrese Run del usuario: "));
 
         usuario.toString();
+
+        // Implementacion clase capacitacion
+
+        Capacitacion capacitacion = new Capacitacion();
+        capacitacion.setId(1);
+        capacitacion.setRut(JOptionPane.showInputDialog("Ingrese rut cliente"));
+        capacitacion.setDia(
+                LocalDate.parse(
+                        JOptionPane.showInputDialog("Ingrese fecha de la capacitacion \n Formato: año-mes-dia")));
+        capacitacion.setHora(LocalTime
+                .parse(JOptionPane.showInputDialog("Ingrese la hora de la capacitacion \n Formato: Hora:Minuto")));
+        capacitacion.setLugar(JOptionPane.showInputDialog("Ingrese el lugar de la capacitacion"));
+        capacitacion.setDuracion(LocalTime
+                .parse(JOptionPane.showInputDialog("Ingrese la duracion de la capacitacion \n Formato: Hora:Minuto")));
+        capacitacion.setCantidadAsistentes(
+                Integer.parseInt(JOptionPane.showInputDialog("Ingrese la cantidad de asistentes")));
+
+        capacitacion.toString();
     }
 }
