@@ -1,6 +1,7 @@
 import javax.swing.JOptionPane;
 
 import cliente.Cliente;
+import usuario.Usuario;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -20,5 +21,11 @@ public class App {
         // mostrar datos
         cliente.toString();
 
+        Usuario usuario = new Usuario();
+        usuario.setNombre(JOptionPane.showInputDialog("Ingrese el nombre del cliente"));
+        usuario.setFechaNacimiento(JOptionPane.showInputDialog("Ingrese la fecha nacimiento del cliente"));
+        usuario.setRun(JOptionPane.showInputDialog("Ingrese Run del usuario: "));
+
+        usuario.toString();
     }
 }
