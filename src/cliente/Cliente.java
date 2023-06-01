@@ -5,17 +5,13 @@ package cliente;
  * 
  */
 public class Cliente {
+    // atributos
     private String rut;
     private String nombres;
     private String apellidos;
     private String telefono;
     private String afp;
-
-    private enum sistemaSalud {
-        fonasa,
-        isapre
-    }
-
+    private String sistemaSalud;
     private String direccion;
     private String comuna;
     private int edad;
@@ -37,9 +33,10 @@ public class Cliente {
      * @param direccion
      * @param comuna
      * @param edad
+     * @param sistemaSalud;
      */
     public Cliente(String rut, String nombres, String apellidos, String telefono, String afp, String direccion,
-            String comuna, int edad) {
+            String comuna, int edad, String sistemaSalud) {
         this.rut = rut;
         this.nombres = nombres;
         this.apellidos = apellidos;
@@ -48,6 +45,7 @@ public class Cliente {
         this.direccion = direccion;
         this.comuna = comuna;
         this.edad = edad;
+        this.sistemaSalud = sistemaSalud;
     }
 
     /**
@@ -56,7 +54,8 @@ public class Cliente {
     @Override
     public String toString() {
         return "Cliente [rut=" + rut + ", nombres=" + nombres + ", apellidos=" + apellidos + ", telefono=" + telefono
-                + ", afp=" + afp + ", direccion=" + direccion + ", comuna=" + comuna + ", edad=" + edad + "]";
+                + ", afp=" + afp + ", direccion=" + direccion + ", comuna=" + comuna + ", edad=" + edad
+                + "sistema salud= " + sistemaSalud + "]";
     }
 
     // Getters and Setters
@@ -122,6 +121,14 @@ public class Cliente {
 
     public void setEdad(int edad) {
         this.edad = edad;
+    }
+
+    public String getSistemaSalud() {
+        return sistemaSalud;
+    }
+
+    public void setSistemaSalud(String sistemaSalud) {
+        this.sistemaSalud = sistemaSalud;
     }
 
 }
