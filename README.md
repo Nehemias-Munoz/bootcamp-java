@@ -13,6 +13,3 @@ Una empresa corredora de propiedades necesita contar con un sistema de registro 
 - Debe agregar el método nombreCompleto(), el cual debe retornar la concatenación de los nombres y apellidos del usuario.
 - Desarrolle el método descomponerRun(), el cual debe retornar un número entero correspondiente a todo lo que está en el RUN antes del guion y del dígito verificador.
 
-Nota 1: Considere que Eclipse permite crear rápidamente muchos métodos de manera fácil y rápida.
-
-Nota 2: Recuerde que esta clase, a diferencia de las anteriores desarrolladas, no debe llevar un método main(), ya que desde ella no se ejecutarán acciones.
