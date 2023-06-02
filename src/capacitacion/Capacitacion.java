@@ -109,4 +109,21 @@ public class Capacitacion {
         this.cantidadAsistentes = cantidadAsistentes;
     }
 
+    /**
+     * Metodo que retorna informacion de la capacitacion
+     * 
+     * @return String con datos de la capacitacion
+     */
+    public String mostrarDetalle() {
+        StringBuilder mensaje = new StringBuilder("La capacitacion será en ");
+        mensaje.append(lugar);
+        mensaje.append(" a las ");
+        mensaje.append(hora);
+        mensaje.append(" del día ");
+        mensaje.append(dia);
+        mensaje.append("Y durará ");
+        mensaje.append(duracion);
+        mensaje.append(" minutos");
+        return mensaje.toString();
+    }
 }
