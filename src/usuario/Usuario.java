@@ -9,7 +9,7 @@ import java.time.LocalDate;
 public class Usuario {
 
     private String nombre;
-    private String fechaNacimiento;
+    private LocalDate fechaNacimiento;
     private String run;
 
     /**
@@ -25,7 +25,7 @@ public class Usuario {
      * @param fechaNacimiento
      * @param run
      */
-    public Usuario(String nombre, String fechaNacimiento, String run) {
+    public Usuario(String nombre, LocalDate fechaNacimiento, String run) {
         this.nombre = nombre;
         this.fechaNacimiento = fechaNacimiento;
         this.run = run;
@@ -53,11 +53,11 @@ public class Usuario {
         this.nombre = nombre;
     }
 
-    public String getFechaNacimiento() {
+    public LocalDate getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(String fechaNacimiento) {
+    public void setFechaNacimiento(LocalDate fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 
@@ -73,7 +73,7 @@ public class Usuario {
         StringBuilder mensaje = new StringBuilder("El usuario tiene ");
         LocalDate lc = LocalDate.now();
         int anioActual = lc.getYear();
-        int edad = anioActual - LocalDate.parse(fechaNacimiento).getYear();
+        int edad = anioActual - fechaNacimiento.getYear();
         mensaje.append(edad);
         mensaje.append(" años.");
         return mensaje.toString();
