@@ -1,5 +1,7 @@
 package usuario;
 
+import java.time.LocalDate;
+
 /**
  * @author nehemiasmunoz
  *
@@ -65,5 +67,15 @@ public class Usuario {
 
     public void setRun(String run) {
         this.run = run;
+    }
+
+    public String mostrarEdad() {
+        StringBuilder mensaje = new StringBuilder("El usuario tiene ");
+        LocalDate lc = LocalDate.now();
+        int anioActual = lc.getYear();
+        int edad = anioActual - LocalDate.parse(fechaNacimiento).getYear();
+        mensaje.append(edad);
+        mensaje.append(" años.");
+        return mensaje.toString();
     }
 }
