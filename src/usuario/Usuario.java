@@ -69,6 +69,11 @@ public class Usuario {
         this.run = run;
     }
 
+    /**
+     * Metodo que retorna la edad del usuario basado en la fecha que se entrego
+     * 
+     * @return Mensaje con los años del usuario
+     */
     public String mostrarEdad() {
         StringBuilder mensaje = new StringBuilder("El usuario tiene ");
         LocalDate lc = LocalDate.now();
