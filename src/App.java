@@ -1,6 +1,6 @@
 import capacitacion.Capacitacion;
 import modelos.cliente.Cliente;
-import usuario.Usuario;
+import modelos.usuario.Usuario;
 
 import javax.swing.*;
 import java.time.LocalDate;
@@ -28,14 +28,14 @@ public class App {
         // mostrar datos
         JOptionPane.showMessageDialog(null, cliente.toString());
 
-        // Implementacion clase usuario
+        // Implementacion clase modelos.usuario
         Usuario usuario = new Usuario();
-        usuario.setNombre(JOptionPane.showInputDialog("Ingrese el nombre del usuario"));
+        usuario.setNombre(JOptionPane.showInputDialog("Ingrese el nombre del modelos.usuario"));
         String fechaNacimiento;
         fechaNacimiento = JOptionPane
-                .showInputDialog("Ingrese la fecha nacimiento del usuario \n Formato: Año-Mes-Dia");
+                .showInputDialog("Ingrese la fecha nacimiento del modelos.usuario \n Formato: Año-Mes-Dia");
         usuario.setFechaNacimiento(LocalDate.parse(fechaNacimiento));
-        usuario.setRun(JOptionPane.showInputDialog("Ingrese el run del usuario:"));
+        usuario.setRun(JOptionPane.showInputDialog("Ingrese el run del modelos.usuario:"));
 
         JOptionPane.showMessageDialog(null, usuario.toString());
         JOptionPane.showMessageDialog(null, usuario.mostrarEdad());
@@ -76,7 +76,7 @@ public class App {
         cliente2.setAfp("Habitad");
         capacitacion2.setCantidadAsistentes(8);
 
-        StringBuilder nuevosDatos = new StringBuilder("Datos usuario");
+        StringBuilder nuevosDatos = new StringBuilder("Datos modelos.usuario");
         nuevosDatos.append(usuario2.getNombre());
         nuevosDatos.append("\n");
         nuevosDatos.append(usuario2.getRun());

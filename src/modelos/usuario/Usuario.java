@@ -1,10 +1,9 @@
-package usuario;
+package modelos.usuario;
 
 import java.time.LocalDate;
 
 /**
  * @author nehemiasmunoz
- *
  */
 public class Usuario {
 
@@ -20,7 +19,7 @@ public class Usuario {
 
     /**
      * Constructor con parametros
-     * 
+     *
      * @param nombre
      * @param fechaNacimiento
      * @param run
@@ -70,12 +69,12 @@ public class Usuario {
     }
 
     /**
-     * Metodo que retorna la edad del usuario basado en la fecha que se entrego
-     * 
-     * @return Mensaje con los años del usuario
+     * Metodo que retorna la edad del modelos.usuario basado en la fecha que se entrego
+     *
+     * @return Mensaje con los años del modelos.usuario
      */
     public String mostrarEdad() {
-        StringBuilder mensaje = new StringBuilder("El usuario tiene ");
+        StringBuilder mensaje = new StringBuilder("El modelos.usuario tiene ");
         LocalDate lc = LocalDate.now();
         int anioActual = lc.getYear();
         int edad = anioActual - fechaNacimiento.getYear();

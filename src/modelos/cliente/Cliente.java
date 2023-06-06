@@ -1,6 +1,6 @@
 package modelos.cliente;
 
-import usuario.Usuario;
+import modelos.usuario.Usuario;
 
 /**
  * @author nehemiasmunoz

@@ -1,6 +1,6 @@
 package modelos.administrativo;
 
-import usuario.Usuario;
+import modelos.usuario.Usuario;
 
 import java.time.LocalDate;
 
