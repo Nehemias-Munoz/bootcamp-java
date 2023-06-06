@@ -5,7 +5,7 @@ import modelos.usuario.Usuario;
 import java.util.ArrayList;
 
 public class Listado {
-    private ArrayList<Usuario> listaUsuarios;
+    private ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
 
     /**
      * Constructor vacio
