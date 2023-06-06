@@ -150,4 +150,14 @@ public class Cliente extends Usuario {
         return this.sistemaSalud;
     }
 
+    /**
+     * Metodo que muestra por consola los datos propios y los del padre
+     */
+    @Override
+    public void analizarUsuario() {
+        super.analizarUsuario();
+        System.out.println("Cliente [rut=" + rut + ", nombres=" + nombres + ", apellidos=" + apellidos + ", telefono=" + telefono
+                + ", afp=" + afp + ", direccion=" + direccion + ", comuna=" + comuna + ", edad=" + edad
+                + "sistema salud= " + sistemaSalud + "]");
+    }
 }
