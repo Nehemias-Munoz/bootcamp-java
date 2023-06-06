@@ -1,58 +1,33 @@
-## Ejercicio 14 grupal
+# Instrucciones Ejercicio grupal 14
 
-Observación: este ejercicio es la continuación del ejercicio individual del día anterior
 Una empresa de asesorías en prevención de riesgos necesita contar con un sistema de información
 que le permita administrar los principales procesos que se llevan a cabo en ella día a día.
-Hasta el momento se han definido algunas entidades que darán vida al sistema. Estas son:
-Cliente:
+Como parte de las entidades que conforman el proyecto, se establecieron la clase Usuario, la que
+contiene los datos de quienes tienen acceso a la plataforma. Existen tres tipos de usuario: Cliente,
+Profesional y Administrativo. La primera de ellas ya fue establecida, mientras que los datos
+necesarios para las otras clases son:
+Profesional:
 
-- RUT: corresponde a un número menor a 99.999.999
-- Nombres
-- Apellidos
-- Teléfono
-- AFP
-- Sistema de salud: 1 (Fonasa) o 2 (Isapre)
-- Dirección
-- Comuna
-- Edad
-  Usuario:
-- Nombre
-- Fecha de nacimiento
-- RUN
-  Capacitacion
-- Identificador: número interno de la capacitación manejado por la empresa
-- RUT cliente
-- Día
-- Hora
-- Lugar
-- Duración
-- Cantidad de asistentes
+- Título
+- Fecha de ingreso
+  Administrativo
+- Área
+- Experiencia previa
+  Como parte de este ejercicio se solicita:
+- Las clases Profesional, Administrativo y Cliente deben extender desde la
+  clase Usuario.
+- Crear la interface Asesoria, la cual debe tener definido el método
+  analizarUsuario().
+- La clase Usuario debe implementar la interface anterior.
+- En la clase padre, el método analizarUsuario()mostrar el nombre de usuario.
+- En las clases hijas, el método analizarUsuario() debe desplegar la información
+  del método correspondiente al padre, y los datos expuestos en las clases hijas.
+- Cree la clase Listado, la que debe tener declarada una lista objetos de la clase
+  Usuario, representada a través de la interface Asesoria.
+- En la clase Listado debe tener dos métodos: uno para agregar un elemento al listado,
+  y otro que permita llamar al método analizarUsuario() de todas las instancias
+  registradas en el listado.
 
-Se pide crear un proyecto Java llamado EmpresaClase14, el cual debe tener tres clases
-correspondientes a las entidades antes mencionadas. Recuerde que cada clase debe llevar:
-
-- Atributos
-- Método toString()
-- Un constructor que no reciba parámetros
-- Un constructor que reciba todos los atributos de la clase como parámetros
-- Métodos mutadores
-- Métodos accesores
-  Además, se pide que en cada clase existan los métodos siguientes:
-  Cliente
-- obtenerNombre(): retorna un String con el nombre completo del cliente (nombres +
-  apellidos)
-- obtenerSistemaSalud(): de acuerdo al valor registrado en el objeto, despliega el tipo de
-  sistema de salud
-  Usuario
-- mostrarEdad(): retorna un mensaje que diga “El usuario tiene X años”, en donde X es la
-  edad del usuario en cuestión
-  Capacitación
-- mostrarDetalle(): retorna un mensaje con el texto “La capacitación será en A a las B del día
-  C, y durará D minutos”, en donde A es el lugar, B es la hora, C es el día y D son los minutos.
-  Por último, debe crear una clase adicional que contenga un método main(), a través del cual se haga
-  lo siguiente:
-- Cree dos instancias de cada clase, usando los dos constructores y mutadores existentes
-- Debe desplegar los datos de los objetos a través del método toString().
-- Modifique un atributo a elección de cada clase
-- Despliegue los datos de cada objeto, esta vez usando métodos accesores. Procure asimismo
-  desplegar el resultado de los métodos recién creados.
+- Finalmente, cree una clase con un método main(). En ella se debe crear una instancia
+  de la clase Listado, y cinco instancias de diferentes tipos de usuarios. Se deben
+  agregar las instancias al
