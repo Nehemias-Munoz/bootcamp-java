@@ -1,11 +1,13 @@
 package modelos.usuario;
 
+import interfaces.Asesoria;
+
 import java.time.LocalDate;
 
 /**
  * @author nehemiasmunoz
  */
-public class Usuario {
+public class Usuario implements Asesoria {
 
     private String nombre;
     private LocalDate fechaNacimiento;
@@ -81,5 +83,14 @@ public class Usuario {
         mensaje.append(edad);
         mensaje.append(" años.");
         return mensaje.toString();
+    }
+
+    @Override
+    public void analizarUsuario() {
+        System.out.println("Usuario{" +
+                "nombre='" + nombre + '\'' +
+                ", fechaNacimiento='" + fechaNacimiento + '\'' +
+                ", run='" + run + '\'' +
+                '}');
     }
 }
