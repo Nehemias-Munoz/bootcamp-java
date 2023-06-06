@@ -1,10 +1,11 @@
-package cliente;
+package modelos.cliente;
+
+import usuario.Usuario;
 
 /**
  * @author nehemiasmunoz
- * 
  */
-public class Cliente {
+public class Cliente extends Usuario {
     // atributos
     private String rut;
     private String nombres;
@@ -24,7 +25,7 @@ public class Cliente {
 
     /**
      * Constructor con parametros
-     * 
+     *
      * @param rut
      * @param nombres
      * @param apellidos
@@ -36,7 +37,7 @@ public class Cliente {
      * @param sistemaSalud;
      */
     public Cliente(String rut, String nombres, String apellidos, String telefono, String afp, String direccion,
-            String comuna, int edad, String sistemaSalud) {
+                   String comuna, int edad, String sistemaSalud) {
         this.rut = rut;
         this.nombres = nombres;
         this.apellidos = apellidos;
@@ -133,7 +134,7 @@ public class Cliente {
 
     /**
      * Metodo que retorna el nombre completo
-     * 
+     *
      * @return nombre y apellido concatenados a un espacio
      */
     public String obtenerNombre() {
@@ -141,8 +142,8 @@ public class Cliente {
     }
 
     /**
-     * Metodo que retorna el sistema de salud del cliente
-     * 
+     * Metodo que retorna el sistema de salud del modelos.cliente
+     *
      * @return tipo de sistema de salud (fonasa|isapre)
      */
     public String obtenerSistemaSalud() {
