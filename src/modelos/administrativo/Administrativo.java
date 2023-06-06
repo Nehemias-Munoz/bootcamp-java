@@ -58,4 +58,17 @@ public class Administrativo extends Usuario {
     public void setExperienciaPrevia(String experienciaPrevia) {
         this.experienciaPrevia = experienciaPrevia;
     }
+
+    /**
+     * Metodo que muestra por consola los datos propios y los del padre
+     */
+    @Override
+    public void analizarUsuario() {
+        super.analizarUsuario();
+        System.out.println("Administrativo{" +
+                "area='" + area + '\'' +
+                ", experienciaPrevia='" + experienciaPrevia + '\'' +
+                '}');
+    }
+
 }
